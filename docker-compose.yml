@@ -1,7 +1,7 @@
 version: "3.9"  # optional since v1.27.0
 services:
   cups:
-    image: samsung-cups
+    image: oalmelid/cups-samsung:latest
     environment:
       - CUPSADMIN=
       - CUPSPASSWORD=
