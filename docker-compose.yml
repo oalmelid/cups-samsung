@@ -1,0 +1,13 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  cups:
+    image: samsung-cups
+    environment:
+      - CUPSADMIN=
+      - CUPSPASSWORD=
+    network_mode: "host"
+    volumes:
+      - type: bind
+        source: conf
+        target: /cups/
+    command: [cupsd,-c,/cups/cupsd.conf]
